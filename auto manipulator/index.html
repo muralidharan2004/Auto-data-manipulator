@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Processing App</title>
+</head>
+<body>
+    <h1>File Processing App</h1>
+    <form action="/convert_file" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <select name="output_format">
+            <option value="csv">CSV</option>
+            <option value="xml">XML</option>
+            <option value="text">Text</option>
+            <option value="xlsx">XLSX</option>
+            <option value="json">JSON</option>
+        </select>
+        <button type="submit">Convert File</button>
+    </form>
+
+    <form action="/clean_data" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <button type="submit">Clean Data</button>
+    </form>
+
+    <form action="/extract_text" method="post" enctype="multipart/form-data">
+        <input type="file" name="image">
+        <select name="output_format">
+            <option value="csv">CSV</option>
+            <option value="xml">XML</option>
+            <option value="text">Text</option>
+            <option value="xlsx">XLSX</option>
+            <option value="json">JSON</option>
+        </select>
+        <button type="submit">Extract Text from Image</button>
+    </form>
+</body>
+</html>
